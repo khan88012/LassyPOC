@@ -1,0 +1,56 @@
+.footer{
+    min-height: 20rem;
+    background-color: black;
+    color: #ffff;
+    .container{
+       
+        h5{
+            margin-bottom: 2.5rem;
+        }
+        p{
+            
+        }
+        svg{
+            margin-right: 1rem;
+        }
+        input{
+            background-color: black;
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 480px) {
+   .footer{
+    // text-align: center;
+    .border-sm  {
+        border-bottom: 1px solid;
+        margin-bottom : 1rem;
+    }
+   }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .footer {
+        .container {
+            .hideIt {
+                display: none;
+            }
+     
+        }
+    }
+}
+@media screen and (min-width: 1000px) {
+    .footer {
+        .container {
+            .hideAccordion {
+                display: none;
+            }
+         
+        }
+    }
+}
+
+.accordion-button, .accordion-body{
+    background-color: black;
+}

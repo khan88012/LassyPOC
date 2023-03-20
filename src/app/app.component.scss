@@ -1,0 +1,13 @@
+.pageContent {
+    min-height: 50rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .pageContent {
+
+        .hideSideBar {
+            display: none;
+        }
+
+    }
+}

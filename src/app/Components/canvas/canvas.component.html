@@ -1,0 +1,101 @@
+<div class="canvas d-flex justify-content-between">
+    <div>
+        <h5>All Products<span class="text-muted"><small> (237 items)</small></span> </h5>
+        <div class="hideFilter mt-2 mb-5 ">
+            <div class="d-flex">
+
+                <a class="text-black" data-bs-toggle="offcanvas" href="#sideBar" role="button" aria-controls="sideBar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-funnel" viewBox="0 0 16 16">
+                        <path
+                            d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+                    </svg>
+                </a>
+
+                <h5>Filter and Sorting</h5>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="text-muted hideSort">
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle me-3" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sort By : Feature
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+<div>
+    <div class="row ">
+        <div class="col-6 col-lg-4 mb-3 " *ngFor="let item of items">
+            <div>
+                <img class="rounded-1" [src]="item.image" height="300" width="100%"><span
+                    class="badge badge-position rounded-pill text-bg-dark">- {{item.off}}%</span>
+
+            </div>
+            <p><b>{{item.name}}</b></p>
+            <div class="d-flex mb-3">
+                <label class="custom-radio black">
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    
+                  </label>
+                  <label class="custom-radio skyblue">
+                    <input type="radio"  name="radio">
+                    <span class="checkmark"></span>
+                    
+                  </label>
+                  <label class="custom-radio pink">
+                    <input type="radio"  name="radio">
+                    <span class="checkmark"></span>
+                    
+                  </label>
+            
+              </div>
+
+            <!-- <div class="d-flex">
+                <div class="color me-1" style="background-color: black;"></div>
+                <div class="color me-1" style="background-color: skyblue;"></div>
+                <div class="color me-1" style="background-color: pink;"></div>
+            </div> -->
+
+            <div class="d-flex ">
+                <p class="me-2">${{item.newPrice}}</p>
+                <p class="text-danger"><s>${{item.oldPrice}}</s></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+  
+
+
+
+
+
+
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sideBar" aria-labelledby="sideBar">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter By</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <app-side-bar></app-side-bar>
+    </div>
+</div>
